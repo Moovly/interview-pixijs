@@ -1,4 +1,4 @@
-// install pixi.js
+// install the "pixi.js" package => Documentation: http://www.pixijs.com/
 
 // Select the DOM element with id: "root"
 
