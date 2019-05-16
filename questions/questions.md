@@ -4,6 +4,9 @@
 
 ## What is “closure” in javascript? Can you provide an example?
 
+## What's the difference between a variable that is: null, undefined or undeclared?
+- How would you go about checking for any of these states?
+
 ## Promises
 
 ```javascript
@@ -51,9 +54,11 @@ for (var i = 0; i < arr.length; i++) {
 }
 ```
 
-## Write a function that allows you to do this:
-
-`multiply(5)(6);`
+## How would you make this work?
+```javascript
+multiply(5, 6); // 30
+multiply(5)(6); // 30
+```
 
 ## Difference between `==` and `===`
 
@@ -96,3 +101,6 @@ try {
 ## What are the differences between a class component and functional component?
 
 ## What is the use of refs?
+
+# PixiJS
+- See `src/index.js`

@@ -42,6 +42,17 @@ innerArg = 5
 innerFuncVar = y
 globalVar = abc
 ```
+## What's the difference between a variable that is: null, undefined or undeclared?
+- How would you go about checking for any of these states?
+```javascript
+try {
+  if(variable === undefined) console.log('variable is undefined);
+  if(variable === null) console.log('variable is null);
+
+} catch (err) {
+  console.log('variable is undeclared)
+}
+```
 
 ## Promises
 ```javascript
@@ -62,6 +73,31 @@ Expected Output:
 statement
 First Promise
 catch: Second Promise
+```
+
+Does the order change when we comment out the first then:
+
+```javascript
+const p1 = Promise.resolve("First Promise");
+const p2 = Promise.reject("Second Promise");
+
+p2
+  //.then(r => { console.log('then:', r) })
+  .catch(e => {
+    console.log("catch:", e);
+  });
+
+p1.then(r => {
+  console.log(r);
+});
+
+console.log("statement");
+```
+Expected Output: Yes
+```
+statement
+catch: Second Promise
+First Promise
 ```
 
 ## Variable declarations (fix the bug)
@@ -90,8 +126,11 @@ The index of this number is: 4
 The index of this number is: 4
 ```
 
-## Write a function that allows you to do this:
-`multiply(5)(6);`
+## How would you make this work?
+```javascript
+multiply(5, 6); // 30
+multiply(5)(6); // 30
+```
 
 ## Difference between `==` and `===`
 ### Answer
@@ -104,6 +143,22 @@ The index of this number is: 4
 
 
 ## Exceptions
+
+### What would be the output of the following code:
+```javascript
+try {
+  try {
+    throw new Error("error");
+  } catch (ex) {
+    console.log("inner:", ex.message);
+    throw ex;
+  } finally {
+    console.log("finally");
+  }
+} catch (ex) {
+  console.log("outer:", ex.message);
+}
+```
 
 ### Why would you use the finally statement over simply putting it after the try catch block?
 
