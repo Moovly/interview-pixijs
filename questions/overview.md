@@ -46,11 +46,10 @@ globalVar = abc
 - How would you go about checking for any of these states?
 ```javascript
 try {
-  if(variable === undefined) console.log('variable is undefined);
-  if(variable === null) console.log('variable is null);
-
+  if(variable === undefined) console.log('variable is undefined');
+  if(variable === null) console.log('variable is null');
 } catch (err) {
-  console.log('variable is undeclared)
+  console.log('variable is undeclared');
 }
 ```
 
