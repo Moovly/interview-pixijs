@@ -96,6 +96,8 @@ try {
 }
 ```
 
+## What is WebGL
+
 # React
 
 ## Can you give an example when to use
