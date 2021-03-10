@@ -5,6 +5,7 @@
 ## What is “closure” in javascript? Can you provide an example?
 
 ## What's the difference between a variable that is: null, undefined or undeclared?
+
 - How would you go about checking for any of these states?
 
 ## Promises
@@ -13,11 +14,9 @@
 const p1 = Promise.resolve("First Promise");
 const p2 = Promise.reject("Second Promise");
 
-p2
-  .then(r => console.log("then:", r))
-  .catch(e => console.log("catch:", e));
+p2.then((r) => console.log("then:", r)).catch((e) => console.log("catch:", e));
 
-p1.then(r => {
+p1.then((r) => {
   console.log(r);
 });
 
@@ -32,11 +31,11 @@ const p2 = Promise.reject("Second Promise");
 
 p2
   //.then(r => { console.log('then:', r) })
-  .catch(e => {
+  .catch((e) => {
     console.log("catch:", e);
   });
 
-p1.then(r => {
+p1.then((r) => {
   console.log(r);
 });
 
@@ -55,6 +54,7 @@ for (var i = 0; i < arr.length; i++) {
 ```
 
 ## How would you make this work?
+
 ```javascript
 multiply(5, 6); // 30
 multiply(5)(6); // 30
@@ -87,20 +87,37 @@ try {
 
 ```javascript
 try {
-  throw new Error('error');
+  throw new Error("error");
 } catch (error) {
-    Logger.writeLogToDatabase(error);
-    console.log('c');
+  Logger.writeLogToDatabase(error);
+  console.log("c");
 } finally {
-    console.log('x');
+  console.log("x");
 }
 ```
 
 # React
 
-## What are the differences between a class component and functional component?
+## Can you give an example when to use
+
+- React.useMemo
+- React.memo
+- React.useEffect
+- React.useCallback
+
+## Can you explain Prop drilling
 
 ## What is the use of refs?
 
+## What is new in React v17.0
+
+## Experience in React Native?
+
+- Expo or no expo? (advantages & disadvantages)
+- Experience with native android & ios?
+
+## Can you show me some projects you made?
+
 # PixiJS
+
 - See `src/index.js`
