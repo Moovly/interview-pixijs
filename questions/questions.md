@@ -101,8 +101,8 @@ try {
 ## Can you give an example when to use
 
 - React.useMemo
-- React.memo
 - React.useEffect
+- React.memo
 - React.useCallback
 
 ## Can you explain Prop drilling
